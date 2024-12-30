@@ -1,4 +1,4 @@
-// Made by ThatOneGeekyGuy
+// Made by ThatOneGuy511
 // Github: https://github.com/ThatOneGuy511/FlipperZero-InputDemo-App
 
 
