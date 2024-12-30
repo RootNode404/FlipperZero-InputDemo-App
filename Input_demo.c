@@ -1,5 +1,5 @@
 // Made by ThatOneGeekyGuy
-// Github: https://github.com/ThatOneGeekyGuy/FlipperZero-InputDemo-App
+// Github: https://github.com/ThatOneGuy511/FlipperZero-InputDemo-App
 
 
 #include <input/input.h>    // Handles input
