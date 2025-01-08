@@ -5,6 +5,7 @@
 #include <input/input.h>    // Handles input
 #include <gui/gui.h>        // Handles GUI
 #include <furi.h>           // Handles the furi logging
+#include <furi_hal.h>
 
 #define TAG "Input Demo"   // Tag for furi logging
 
@@ -59,6 +60,7 @@ int32_t input_demo_main(void*) {
     // Input handling loop
     InputEvent input;
     bool exit_loop = false;
+    int vibroTime = 25;
     FURI_LOG_I(TAG, "Start the main loop.");
     while(1) {
 
@@ -70,21 +72,58 @@ int32_t input_demo_main(void*) {
         switch(input.key) {
         case InputKeyLeft:
             strcpy(app.pressedKey, "Left");
+            if (input.type == InputTypePress) {
+                // Vibrate for 500ms
+                furi_hal_vibro_on(true);
+                furi_delay_ms(vibroTime);
+                furi_hal_vibro_on(false); 
+            }
             break;
         case InputKeyRight:
             strcpy(app.pressedKey, "Right");
+
+            if (input.type == InputTypePress) {
+                // Vibrate for 500ms
+                furi_hal_vibro_on(true);
+                furi_delay_ms(vibroTime);
+                furi_hal_vibro_on(false); 
+            }
             break;
         case InputKeyOk:
             strcpy(app.pressedKey, "Ok/Enter");
+            if (input.type == InputTypePress) {
+                // Vibrate for 500ms
+                furi_hal_vibro_on(true);
+                furi_delay_ms(vibroTime);
+                furi_hal_vibro_on(false); 
+            }
             break;
         case InputKeyUp:
             strcpy(app.pressedKey, "Up");
+            if (input.type == InputTypePress) {
+                // Vibrate for 500ms
+                furi_hal_vibro_on(true);
+                furi_delay_ms(vibroTime);
+                furi_hal_vibro_on(false); 
+            }
             break;
         case InputKeyDown:
             strcpy(app.pressedKey, "Down");
+            if (input.type == InputTypePress) {
+                // Vibrate for 500ms
+                furi_hal_vibro_on(true);
+                furi_delay_ms(vibroTime);
+                furi_hal_vibro_on(false); 
+            }
             break;
         case InputKeyBack:
             strcpy(app.pressedKey, "Back/Return");
+            if (input.type == InputTypePress) {
+                // Vibrate for 500ms
+                furi_hal_vibro_on(true);
+                furi_delay_ms(vibroTime);
+                furi_hal_vibro_on(false); 
+            }
             
             // Hold down for 1 seconds to exit
             if (input.type == InputTypeLong)
